@@ -1,0 +1,46 @@
+extends layout
+
+block css
+  link(rel='stylesheet', type='text/css', href='/stylesheets/admin_create_actu_style.css')
+
+block content
+  .container
+    .row
+      h2.text-center=message
+      a.text-center(href="" class="btn btn-info") Retour
+    br
+    br 
+    .row
+      form(method="POST" enctype="multipart/form-data" action='/main/change-:'+action)
+        .form-group
+          label(for='name') Nom 
+          input#name.form-control(type='text' placeholder='Bob' name="lastname" maxlength="20" value=body.lastname)
+        .form-group
+          label(for='name') Prénom 
+          input#name.form-control(type='text' placeholder='Google' name="firstname" maxlength="20" value=body.firstname)
+        .form-group
+          label(for='addresse') Addresse 
+          input#email.form-control(type='text' placeholder='email' name="emailAdress" maxlength="250" value=body.emailAdress)
+        .form-group
+          label(for='dob') Date anniversaire 
+          input#email.form-control(type='date' placeholder='sadfa' name="dob" value=body.dob)
+        //-.form-group
+          label(for='name') Latitude  (écrire au millième)
+          input#name.form-control(type='number'  placeholder='123.123' step="0.001" min="0" max='100' name="latitude" value=latitude)
+        //-.form-group
+          label(for='name') Longitude (écrire au millième) 
+          input#name.form-control(type='number' placeholder='123.123' step="0.001" min="0" max='100' name="longitude" value=longitude)
+        //-.form-group
+          label(for='code') Code postal 
+          input#sous-titre.form-control(type='text' placeholder="0000"  name="code"  value=code)
+        //-.form-group
+          label(for='city') City 
+          input#pieces.form-control(type='text' name="pieces" placeholder="Atlantida" value=city)
+        //-.form-group
+          label(for='image') Belle photo (jpg, png ou gif) 
+          img(src="/images/" +image, alt=''  width='100')
+          br
+          br
+          input#image.form-control(type='file' name="image" value=image accept="image/*")
+        button.btn.btn-default(type='submit' onclick="return confirm('Voulez-vous modifier cet élément ?');") Modifier
+  

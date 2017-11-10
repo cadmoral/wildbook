@@ -1,0 +1,67 @@
+.noustrouver {
+	margin-top: 100px;
+}
+
+.noustrouver h2 {
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.table-style {
+	padding-bottom: 30px;
+}
+
+.hauttableau{
+	background-color: #00AB97;
+	color: white;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+
+.responsive {
+	width: 100%;
+}
+
+#map {
+	width: 100%;
+	height: 500px;
+}
+
+
+ .table {
+ 	font-weight: 600;
+ }
+
+.pizza-table {
+	font-size: 19px;
+	text-align: justify;
+}
+
+.pizza-table-two {
+	font-size: 18px;
+	text-align: justify;
+}
+
+.btn-logout {
+	color: #ffffff;
+	background-color: red;
+	border-color: #000000;
+	margin: 10px;
+}
+
+.btn-logout:hover {
+	color: #ffffff;
+	background-color: orange;
+	border-color: #000000;
+	opacity: 0.8;
+	transition: .8s ease;
+}
+
+/* Table responsive for sm screens*/
+
+@media screen and (max-width: 400px){
+	.table {
+		font-size: 12px;
+	}
+}

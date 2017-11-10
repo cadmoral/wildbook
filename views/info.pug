@@ -1,0 +1,16 @@
+mixin info(person)
+	- var path = "/images/"
+	.col-md-10
+			tr
+				td.text-center
+					img(src="/images/" + person.image, alt='', width='150')
+
+				//- SELECT id, userid, firstname, lastname, dob, emailAddress, Address.address, Address.Postal_code, Address.City, Address.Country,
+				//- Address.longitude, Address.latitude, Languages.language FROM people ...;
+
+				td.text-center=person.firstname + ' ' +  person.lastname 
+				td.text-center=person.dob
+				td.text-center=person.address
+				td.text-center=person.longitude + ' ' + person.latitude
+				td.text-center=person.language
+				

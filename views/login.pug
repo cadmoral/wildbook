@@ -1,0 +1,43 @@
+extends admin_layout
+
+block css
+	link(rel='stylesheet', type='text/css', href='/stylesheets/admin_login_style.css')
+
+block content
+	.container
+		.row
+			p.col-xs-4.col-xs-offset-4.text-center
+				img.img-responsive.img-rounded.deerlo(src='../images/wcs1.png', alt='Logo Wild Code School')
+		.row
+			.col-xs-10.col-xs-offset-1.text-center
+				h2 Hello Friends! 
+				h2 And welcome to the WCS students' platform!
+				p.text-center
+				| Si tu as une invitation pour accèder au site c'est par 
+				a(href='') ici
+				| !
+		.row
+			.col-xs-4.col-xs-offset-4
+				p.warning-bis.text-center= fail
+		.row
+			.col-xs-10.col-xs-offset-1.text-center
+				form.form-login(method="POST" action="/")
+					// Text input
+					.form-group
+					label.control-label.text-center(for='login') Identifiant *
+					br
+					input(name="login" placeholder="Nom d'utilisateur" type="text" required)
+					br
+					// Login input
+					.form-group
+					label.control-label(for='password') Mot de passe *
+					br
+					input(name="password" placeholder="Mot de passe" type="password" required)
+					br
+					br
+					// Connexion
+					.form-group
+						p.text-center
+						button.btn.btn-info(type="submit") Connexion
+
+		

@@ -1,0 +1,34 @@
+.container {
+	margin: auto;
+}
+
+.deerlo{
+	height: 200px;
+}
+.btn {
+	width: 200px;
+	margin: 10px;
+	color: black;
+	background-color: white;
+	border-color: #000000;
+	font-size: 1.2em;
+}
+
+.btn:hover {
+	color: #ffffff;
+	background-color: #1946a6;
+	border-color: #000000;
+	opacity: 0.8;
+	transition: .8s ease;
+}
+
+a {
+	color: black;
+	text-decoration: underline;
+}
+
+input {
+	border-radius: 4px;
+	padding: 4px;
+	border-width: 1px;
+}

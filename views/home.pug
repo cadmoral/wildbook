@@ -1,0 +1,44 @@
+extends layout
+
+block css
+	link(rel='stylesheet', type='text/css' href='/stylesheets/lieux-hor_style.css')
+
+block content
+
+	// TABLEAU
+	.container
+		br
+		section.noustrouver
+			.row
+				.col-md-12.text-center
+					h2 Wildbook
+
+
+			br
+			.row
+				.col-xs-12.col-md-10.col-md-offset-1.table-style
+					table.table.table-striped.table-responsive
+						thead
+							tr.hauttableau
+								th.text-center 
+									| Avatar 
+								th.text-center
+									| People
+								th.text-center
+									| Date d'anniv
+								th.text-center
+									| Adresse
+								th.text-center
+									| Longitude Latitude
+								th.text-center
+									| Langage
+
+						tbody
+							include info.pug
+							.infos
+							//- SELECT id, userid, firstname, lastname, dob,
+							//- emailAddress, longitude, latitude, Address.address,
+							//- Address.Postal_code, Address.City, Address.Country, Languages.language
+							//- FROM people ...;
+							each person in people 
+								+info(person)

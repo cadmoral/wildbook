@@ -1,0 +1,18 @@
+extends layout
+
+block css
+	link(rel='stylesheet', type='text/css' href='/stylesheets/map.css')
+
+block content
+
+	// TABLEAU
+	.container
+		br
+		section.noustrouver
+			.row
+				.col-md-12.text-center
+					h2 Wildmap
+			br
+			.row
+				.col-xs-12.col-md-10.col-md-offset-1
+					include map

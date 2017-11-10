@@ -1,0 +1,38 @@
+extends layout
+
+block css
+	link(rel='stylesheet', type='text/css' href='/stylesheets/lieux-hor_style.css')
+
+block content
+
+	.container
+		br
+		section.noustrouver
+			.row
+				.col-md-12.text-center
+					h2 My wild infos
+
+			br
+			.row
+				.col-md-4.col-md-offset-1
+					a(href="/main/change-modify" class="btn btn-info") Modifier
+
+			br
+			.row
+				.col-xs-12.col-md-10.col-md-offset-1
+					h4 
+						|	Prénom et Nom: 
+						p.text-center=user[0].firstname
+						p.text-center=user[0].lastname
+
+					br
+					h4 
+						|	Addresse: 
+						p.text-center=user[0].addresse
+					br
+					h4 
+						|	Date d'anniversaire:
+						p.text-center=user[0].dop
+					br
+					h4 Avatar:
+					br

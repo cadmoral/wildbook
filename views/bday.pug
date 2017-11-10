@@ -1,0 +1,30 @@
+extends layout
+
+block css
+	link(rel='stylesheet', type='text/css' href='/stylesheets/map.css')
+
+block content
+
+	// BDAY BDAY
+	.container
+		br
+		section.noustrouver
+			.row
+			.col-md-12.text-center
+			h2 wild wild birthday of ...
+			br
+			script(src='../javascripts/calendar.js')
+			script.
+				calendar.js
+			h3.text-center Happy wild bday
+			each val in anniv
+				h3.text-center= val.firstname
+			br
+
+			div
+				iframe#forecast_embed(frameborder='0', height='245', width='100%', src='//forecast.io/embed/#lat=48.8666&lon=2.3333&name=Biutiful Parigi')
+
+
+	
+
+
